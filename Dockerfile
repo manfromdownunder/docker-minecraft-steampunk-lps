@@ -2,17 +2,17 @@
 FROM debian:bullseye-slim
 
 # Set build-time variables
-ARG JAVA_VERSION="temurin-8-jdk"
+ARG JAVA_VERSION="temurin-18-jdk"
 
 # Set default environment variables including EULA_ACCEPT
 ENV EULA_ACCEPT="true" \
-    MINECRAFT_VERSION="1.16.5" \
+    MINECRAFT_VERSION="1.19" \
     SERVER_PORT="25565" \
     MODPACK_URL="https://www.curseforge.com/minecraft/modpacks/steam-punk" \
     JAVA_MEMORY_MAX="10000m" \
     JAVA_MEMORY_MIN="8000m" \
     JAVA_PERM_SIZE="256m" \
-    FORGE_VERSION="36.2.39" \
+    FORGE_VERSION="" \
     RCON_ENABLED="true" \
     RCON_PASSWORD="yourpassword" \
     RCON_PORT="25575" \
@@ -69,7 +69,7 @@ RUN apt-get update && \
     cd .. && \
     ./downloadmods.sh modslist.txt && \
     chmod +x /minecraft/server/start.sh
-    
+
 # Change to the server directory inside the main Minecraft directory
 WORKDIR /minecraft/server
 
