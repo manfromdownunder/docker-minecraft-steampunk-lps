@@ -93,7 +93,6 @@ Manually initiate a server shutdown
 ```docker exec -it minecraft-steampunk-lps-server touch /minecraft/server/autostop.stamp```
 
 
-
 ## Versions
 
 * **1.0.0:** - Initial release.
