@@ -87,10 +87,10 @@ services:
 
 ## minecraft docker commands
 Manually initiate a server restart
-```docker exec -it minecraft-rad2-server touch /minecraft/server/autostart.stamp```
+```docker exec -it minecraft-steampunk-lps-server touch /minecraft/server/autostart.stamp```
 
 Manually initiate a server shutdown
-```docker exec -it minecraft-rad2-server touch /minecraft/server/autostop.stamp```
+```docker exec -it minecraft-steampunk-lps-server touch /minecraft/server/autostop.stamp```
 
 
 
